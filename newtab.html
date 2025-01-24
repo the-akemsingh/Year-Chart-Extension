@@ -12,73 +12,6 @@
       color: #fff;
     }
 
-    /* Horizontal bar styling */
-    #bookmarks-bar {
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      background-color: #333;
-      overflow-x: auto;
-      border-bottom: 1px solid #444;
-    }
-
-    #bookmarks-bar li {
-      list-style: none;
-      margin-right: 15px;
-      display: flex;
-      align-items: center;
-      color: #ddd;
-      cursor: pointer;
-    }
-
-    #bookmarks-bar a {
-      text-decoration: none;
-      color: #ddd;
-      margin-left: 5px;
-      font-size: 14px;
-    }
-
-    #bookmarks-bar a:hover {
-      text-decoration: underline;
-      color: #fff;
-    }
-
-    #bookmarks-bar i {
-      color: #f0c040;
-    }
-
-    /* Vertical rendering for folder content */
-    #vertical-container {
-      display: none;
-      flex-direction: column;
-      padding: 20px;
-      background-color: #444;
-      border-top: 1px solid #555;
-    }
-
-    #vertical-container.active {
-      display: flex;
-    }
-
-    #vertical-container li {
-      list-style: none;
-      margin: 10px 0;
-      display: flex;
-      align-items: center;
-    }
-
-    #vertical-container a {
-      text-decoration: none;
-      color: #ddd;
-      margin-left: 5px;
-      font-size: 14px;
-    }
-
-    #vertical-container a:hover {
-      text-decoration: underline;
-      color: #fff;
-    }
-
     /* Chart styling */
     #chart {
       display: flex;
@@ -134,16 +67,8 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Bookmarks Section -->
-    <div class="section">
-      <ul id="bookmarks-bar"></ul>
-      <div id="vertical-container">
-        <h3>Category</h3>
-        <ul id="category-content"></ul>
-      </div>
-    </div>
 
+  <div class="container">
     <!-- Contributions Chart Section -->
     <div class="section">
       <h2>Year Progress</h2>
