@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Tab</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #2d2d2d;
+      color: #fff;
+    }
+
+    /* Horizontal bar styling */
+    #bookmarks-bar {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: #333;
+      overflow-x: auto;
+      border-bottom: 1px solid #444;
+    }
+
+    #bookmarks-bar li {
+      list-style: none;
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
+      color: #ddd;
+      cursor: pointer;
+    }
+
+    #bookmarks-bar a {
+      text-decoration: none;
+      color: #ddd;
+      margin-left: 5px;
+      font-size: 14px;
+    }
+
+    #bookmarks-bar a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    #bookmarks-bar i {
+      color: #f0c040;
+    }
+
+    /* Vertical rendering for folder content */
+    #vertical-container {
+      display: none;
+      flex-direction: column;
+      padding: 20px;
+      background-color: #444;
+      border-top: 1px solid #555;
+    }
+
+    #vertical-container.active {
+      display: flex;
+    }
+
+    #vertical-container li {
+      list-style: none;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    #vertical-container a {
+      text-decoration: none;
+      color: #ddd;
+      margin-left: 5px;
+      font-size: 14px;
+    }
+
+    #vertical-container a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    /* Chart styling */
+    #chart {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 20px;
+    }
+
+    .month-row {
+      display: flex;
+      align-items: center;
+    }
+
+    .month-name {
+      width: 60px;
+      text-align: right;
+      margin-right: 10px;
+      font-size: 14px;
+      color: #f0c040;
+    }
+
+    .day {
+      width: 15px;
+      height: 15px;
+      background-color: #444;
+      border-radius: 3px;
+      margin: 1px;
+    }
+
+    .day.passed {
+      background-color: #0e4429;
+    }
+
+    .day.remaining {
+      background-color: #161b22;
+    }
+
+    /* Main layout */
+    .container {
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #f0c040;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Bookmarks Section -->
+    <div class="section">
+      <ul id="bookmarks-bar"></ul>
+      <div id="vertical-container">
+        <h3>Category</h3>
+        <ul id="category-content"></ul>
+      </div>
+    </div>
+
+    <!-- Contributions Chart Section -->
+    <div class="section">
+      <h2>Year Progress</h2>
+      <div id="chart"></div>
+    </div>
+  </div>
+  <script src="content.js"></script>
+  
+</body>
+</html>

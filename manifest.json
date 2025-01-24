@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Hello Extension",
+  "version": "1.0",
+  "description": "Shows Hello text on browser home page",
+  "permissions": ["activeTab", "tabs","bookmarks"],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "background": {
+    "service_worker": "background.ts"
+  }
+}
